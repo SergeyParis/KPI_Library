@@ -8,10 +8,10 @@ using Microsoft.Owin.Security.DataProtection;
 using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
-using Library.Models;
-using Library.Providers;
+using Library.Web.Models;
+using Library.Web.Providers;
 
-namespace Library
+namespace Library.Web
 {
     public partial class Startup
     {

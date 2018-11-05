@@ -4,9 +4,9 @@ using System.Linq;
 using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(Library.Startup))]
+[assembly: OwinStartup(typeof(Library.Web.Startup))]
 
-namespace Library
+namespace Library.Web
 {
     public partial class Startup
     {
