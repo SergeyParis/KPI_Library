@@ -7,5 +7,8 @@
     <ArrayOfString>
       <string>C:\KPI\Library\Library.Shared\Interfaces\IClient.cs</string>
     </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\KPI\Library\Library.Web\Models\MeViewModels.cs</string>
+    </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

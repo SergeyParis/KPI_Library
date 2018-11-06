@@ -43,7 +43,9 @@
     <Compile Include="Interfaces\IAuthor.cs" />
     <Compile Include="Interfaces\IBook.cs" />
     <Compile Include="Interfaces\IClient.cs" />
+    <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\Client.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

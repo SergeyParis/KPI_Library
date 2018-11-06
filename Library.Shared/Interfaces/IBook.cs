@@ -7,5 +7,8 @@
         bool IsGivenUse { get; set; }
         IAuthor Author { get; set; }
         IClient Client { get; set; }
+
+        void GiveInUse(IClient client);
+        void TakeFromUse();
     }
 }
