@@ -3,16 +3,18 @@
     public class Book : IBook
     {
         public int Id { get; set; }
+        public string Name { get; set; }
         public string ISBN { get; set; }
         public bool IsGivenUse { get; set; }
         public IAuthor Author { get; set; }
         public IClient Client { get; set; }
         public int MaxBooksForOneClient { get; set; } = -1;
 
-        public Book(string isbn, IAuthor author) : this (isbn, false, author, null) { }
-        public Book(string isbn, bool isGivenUse, IAuthor author) : this (isbn, isGivenUse, author, null) { }
-        public Book(string isbn, bool isGivenUse, IAuthor author, IClient client)
+        public Book(string name, string isbn, IAuthor author) : this (name, isbn, false, author, null) { }
+        public Book(string name, string isbn, bool isGivenUse, IAuthor author) : this (name, isbn, isGivenUse, author, null) { }
+        public Book(string name, string isbn, bool isGivenUse, IAuthor author, IClient client)
         {
+            Name = name;
             ISBN = isbn;
             IsGivenUse = isGivenUse;
             Author = author;

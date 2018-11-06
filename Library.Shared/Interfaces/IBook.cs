@@ -3,6 +3,7 @@
     public interface IBook
     {
         int Id { get; set; }
+        string Name { get; set; }
         string ISBN { get; set; }
         bool IsGivenUse { get; set; }
         IAuthor Author { get; set; }

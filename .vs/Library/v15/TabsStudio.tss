@@ -2,13 +2,37 @@
 <ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ArrayOfArrayOfString>
     <ArrayOfString>
+      <string>C:\KPI\Library\Library.Core\Common\BookManager.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\KPI\Library\Library.Core\EntityFramework\LibraryContext.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
       <string>C:\KPI\Library\Library.Shared\Models\Book.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\KPI\Library\Library.Shared\Interfaces\IClient.cs</string>
+      <string>C:\KPI\Library\Library.Web\Controllers\HomeController.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\KPI\Library\Library.Web\Models\MeViewModels.cs</string>
+      <string>C:\KPI\Library\Library.Web\Views\Home\Index.cshtml</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\KPI\Library\Library.Shared\Models\Author.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\KPI\Library\Library.Shared\Models\Client.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\KPI\Library\Library.Shared\Interfaces\IBook.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\KPI\Library\Library.Core\EntityFramework\Wrapped\BookWrap.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\KPI\Library\Library.Web\Views\_ViewStart.cshtml</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\KPI\Library\Library.Web\Views\Shared\_Layout.cshtml</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

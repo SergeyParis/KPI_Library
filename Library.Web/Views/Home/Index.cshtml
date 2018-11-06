@@ -1,22 +1,24 @@
 ﻿
 <div class="row">
     @model IEnumerable<Library.Shared.IBook>
-    @{ 
-        WebGrid grid = new WebGrid(Model);
-        //grid.GetHtml(tableStyle: "grid",
-        //              headerStyle: "header",
-        //              rowStyle: "row",
-        //              alternatingRowStyle: "alt-row",
-        //              footerStyle: "footer",
-        //      htmlAttributes: new { cellpadding = "6px", cellspacing = "0px" });
-     }
+    @{
 
-    @grid.GetHtml(tableStyle: "grid",
-                  headerStyle: "header",
-                  rowStyle: "row",
-                  alternatingRowStyle: "alt-row",
-                  footerStyle: "footer",
-                  htmlAttributes: new { cellpadding = "6px", cellspacing = "0px" })
+    }
+    <h1>Books</h1>
+    <table class="table table-hover">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Author Name</th>
+        </tr>
+        @foreach (var row in Model)
+        {
+        <tr>
+            <td scope="row"></td>
+            <td>@row.Name</td>
+            <td>@row.Author.Name</td>
+        </tr>
+        }
 
-
+    </table>
 </div>

@@ -9,6 +9,7 @@ namespace Library.Core.EntityFramework
         private Action TakeFromUseFunc;
 
         public int Id { get; set; }
+        public string Name { get; set; }
         public string ISBN { get; set; }
         public bool IsGivenUse { get; set; }
         public IAuthor Author { get; set; }
@@ -19,6 +20,7 @@ namespace Library.Core.EntityFramework
         public BookWrap(IBook book)
         {
             Id = book.Id;
+            Name = book.Name;
             ISBN = book.ISBN;
             IsGivenUse = book.IsGivenUse;
             Author = book.Author;
