@@ -1,0 +1,14 @@
+C:\KPI\Library\Library.Core\bin\Debug\Library.Core.dll.config
+C:\KPI\Library\Library.Core\bin\Debug\Library.Core.dll
+C:\KPI\Library\Library.Core\bin\Debug\Library.Core.pdb
+C:\KPI\Library\Library.Core\bin\Debug\EntityFramework.dll
+C:\KPI\Library\Library.Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\KPI\Library\Library.Core\bin\Debug\Library.Shared.dll
+C:\KPI\Library\Library.Core\bin\Debug\Library.Shared.pdb
+C:\KPI\Library\Library.Core\bin\Debug\EntityFramework.xml
+C:\KPI\Library\Library.Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\KPI\Library\Library.Core\obj\Debug\Library.Core.csprojAssemblyReference.cache
+C:\KPI\Library\Library.Core\obj\Debug\Library.Core.csproj.CoreCompileInputs.cache
+C:\KPI\Library\Library.Core\obj\Debug\Library.Core.csproj.CopyComplete
+C:\KPI\Library\Library.Core\obj\Debug\Library.Core.dll
+C:\KPI\Library\Library.Core\obj\Debug\Library.Core.pdb

@@ -6,7 +6,7 @@ namespace Library.Core.EntityFramework
 {
     class LibraryContext : DbContext
     {
-        public LibraryContext() : base("") { }
+        public LibraryContext() : base("LibraryDataBaseConnection") { }
 
         public DbSet<BookWrap> Books { get; set; }
         public DbSet<AuthorWrap> Authors { get; set; }

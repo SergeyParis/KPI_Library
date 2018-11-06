@@ -8,8 +8,8 @@ namespace Library.Core.EntityFramework
         public string Name { get; set; }
         public int CountBooksNow { get; set; }
 
-        public Client() { }
-        public Client(IClient client)
+        public ClientWrap() { }
+        public ClientWrap(IClient client)
         {
             Id = client.Id;
             Name = client.Name;
