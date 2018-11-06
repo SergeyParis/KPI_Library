@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 
-namespace Library.Web.Controllers
+namespace Library.Controllers
 {
     [Authorize]
     public class HomeController : Controller
