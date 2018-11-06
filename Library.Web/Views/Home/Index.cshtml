@@ -2,7 +2,7 @@
 <div class="row">
     @model IEnumerable<Library.Shared.IBook>
     @{
-
+        var i = 0;
     }
     <h1>Books</h1>
     <table class="table table-hover">
@@ -13,11 +13,31 @@
         </tr>
         @foreach (var row in Model)
         {
-        <tr>
-            <td scope="row"></td>
-            <td>@row.Name</td>
-            <td>@row.Author.Name</td>
-        </tr>
+            i++;
+            <tr>
+                <td scope="row">@i</td>
+                <td>@row.Name</td>
+                <td>@row.Author.Name</td>
+                <td>
+                    <div class="dropdown">
+                        <a class="nounderline dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            Actions... <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            @if (row.IsGivenUse)
+                            {
+                                <li><a href="#">Give in use...</a></li>
+                            }
+                            else {
+                                <li><a href="#">Take from use...</a></li>
+                            }
+
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Remove</a></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
         }
 
     </table>

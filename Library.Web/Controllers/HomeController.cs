@@ -16,8 +16,8 @@ namespace Library.Web.Controllers
             IAuthor author = new Author("Name Author 1");
             List<IBook> list = new List<IBook>()
             {
-                new Book("Name book 1", "5555511111000", author),
-                new Book("Name book 2", "5555511111001", author)
+                new Book("Name book 1", "5555511111000", true, author, null),
+                new Book("Name book 2", "5555511111001", false, author, null)
             };
 
             return View(list);
