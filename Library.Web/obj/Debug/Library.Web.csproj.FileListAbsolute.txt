@@ -102,5 +102,3 @@ C:\KPI\Library\Library.Web\bin\Library.Core.pdb
 C:\KPI\Library\Library.Web\bin\Library.Core.dll.config
 C:\KPI\Library\Library.Web\bin\Library.Shared.pdb
 C:\KPI\Library\Library.Web\bin\EntityFramework.xml
-C:\KPI\Library\Library.Web\bin\EntityFramework.SqlServer.dll
-C:\KPI\Library\Library.Web\bin\EntityFramework.SqlServer.xml
