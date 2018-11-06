@@ -9,7 +9,7 @@ namespace Library.Core.EntityFramework
         private Action TakeFromUseFunc;
 
         public int Id { get; set; }
-        public int ISBN { get; set; }
+        public string ISBN { get; set; }
         public bool IsGivenUse { get; set; }
         public IAuthor Author { get; set; }
         public IClient Client { get; set; }

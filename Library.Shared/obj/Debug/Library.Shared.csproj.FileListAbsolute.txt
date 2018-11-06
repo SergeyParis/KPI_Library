@@ -3,3 +3,4 @@ C:\KPI\Library\Library.Shared\bin\Debug\Library.Shared.pdb
 C:\KPI\Library\Library.Shared\obj\Debug\Library.Shared.csproj.CoreCompileInputs.cache
 C:\KPI\Library\Library.Shared\obj\Debug\Library.Shared.dll
 C:\KPI\Library\Library.Shared\obj\Debug\Library.Shared.pdb
+C:\KPI\Library\Library.Shared\obj\Debug\Library.Shared.csprojAssemblyReference.cache

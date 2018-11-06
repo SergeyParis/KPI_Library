@@ -1,0 +1,2 @@
+C:\KPI\Library\Library.Tests\obj\Debug\Library.Tests.csprojAssemblyReference.cache
+C:\KPI\Library\Library.Tests\obj\Debug\Library.Tests.csproj.CoreCompileInputs.cache

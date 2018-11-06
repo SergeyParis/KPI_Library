@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
+using Library.Shared;
+using Library.Shared.Models;
+using Library.Core;
 
 namespace Library.Web.Controllers
 {
@@ -10,9 +11,16 @@ namespace Library.Web.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            ViewBag.Title = "Books";
 
-            return View();
+            IAuthor author = new Author("Name Author 1");
+            List<IBook> list = new List<IBook>()
+            {
+                new Book("5555511111000", author),
+                new Book("5555511111001", author)
+            };
+
+            return View(list);
         }
     }
 }
