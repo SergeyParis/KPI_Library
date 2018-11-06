@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1C62BC1C-81D2-408C-B462-CDF2AE9E784B}</ProjectGuid>
+    <ProjectGuid>{495D5CE6-39CE-4251-98B3-5F68D8D92EF4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Library.Tests</RootNamespace>
@@ -99,6 +99,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controllers\HomeControllerTest.cs" />
+    <Compile Include="Controllers\ValuesControllerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
@@ -108,7 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Library.Web\Library.Web.csproj">
-      <Project>{01D6AE23-DA52-4C41-BACD-866E78E0C339}</Project>
+      <Project>{499A4463-BF25-4FD6-A540-C372118C68B3}</Project>
       <Name>Library.Web</Name>
     </ProjectReference>
   </ItemGroup>
