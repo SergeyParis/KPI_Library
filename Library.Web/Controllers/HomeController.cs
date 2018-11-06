@@ -13,12 +13,18 @@ namespace Library.Web.Controllers
         {
             ViewBag.Title = "Books";
 
-            IAuthor author = new Author("Name Author 1");
-            List<IBook> list = new List<IBook>()
-            {
-                new Book("Name book 1", "5555511111000", true, author, null),
-                new Book("Name book 2", "5555511111001", false, author, null)
-            };
+            BookManager.DROP_DB();
+
+            Author author = new Author("Mark Twain");
+            Client client = new Client("Max Brazhnik", 2);
+            BookManager.AddBook(new Book("A Song for Aunt Polly", "1402732872", author));
+            BookManager.AddBook(new Book("The Birthday Boy", "1402742681", author));
+            BookManager.AddBook(new Book("The Spelling Bee", "140274269X", author));
+            BookManager.AddBook(new Book("The Adventures of Tom Sawyer #6: Tom's Treasure Hunt", "1402767544", true, author, client));
+            BookManager.AddBook(new Book("Romeo and Juliet", "1906230455", true, author, client));
+            BookManager.AddBook(new Book("Anna Karenina", "1911091042", author));
+
+            IEnumerable<IBook> list = BookManager.GetAllBooks();
 
             return View(list);
         }
