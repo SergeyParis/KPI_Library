@@ -22,6 +22,7 @@ namespace Library.Web.Controllers
             _client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("aplication/json"));
         }
 
+        [HttpGet]
         public ActionResult Index()
         {
             ViewBag.Title = "Books";
@@ -35,6 +36,18 @@ namespace Library.Web.Controllers
             }
 
             return View(list);
+        }
+
+        [HttpPost]
+        public ActionResult Index()
+        {
+
+        }
+
+        [ChildActionOnly]
+        public ActionResult AddEntity(EntityType type)
+        {
+
         }
     }
 }
