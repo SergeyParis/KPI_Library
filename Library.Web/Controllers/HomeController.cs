@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using Library.Shared;
 using Library.Shared.Models;
 using Library.Core;
+using System.Linq;
 
 namespace Library.Web.Controllers
 {
@@ -13,12 +14,7 @@ namespace Library.Web.Controllers
         {
             ViewBag.Title = "Books";
 
-            IAuthor author = new Author("Name Author 1");
-            List<IBook> list = new List<IBook>()
-            {
-                new Book("Name book 1", "5555511111000", true, author, null),
-                new Book("Name book 2", "5555511111001", false, author, null)
-            };
+            IEnumerable<IBook> list = BookManager.GetAllBooks();
 
             return View(list);
         }

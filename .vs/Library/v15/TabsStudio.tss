@@ -5,16 +5,13 @@
       <string>C:\KPI\Library\Library.Core\Common\BookManager.cs</string>
     </ArrayOfString>
     <ArrayOfString>
+      <string>C:\KPI\Library\Library.Core\EntityFramework\Wrapped\BookWrap.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
       <string>C:\KPI\Library\Library.Core\EntityFramework\LibraryContext.cs</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\KPI\Library\Library.Shared\Models\Book.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\KPI\Library\Library.Web\Controllers\HomeController.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\KPI\Library\Library.Web\Views\Home\Index.cshtml</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\KPI\Library\Library.Shared\Models\Author.cs</string>
@@ -26,13 +23,25 @@
       <string>C:\KPI\Library\Library.Shared\Interfaces\IBook.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\KPI\Library\Library.Core\EntityFramework\Wrapped\BookWrap.cs</string>
+      <string>C:\KPI\Library\Library.Web\Controllers\HomeController.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\KPI\Library\Library.Web\Views\_ViewStart.cshtml</string>
+      <string>C:\KPI\Library\Library.Web\Views\Home\Index.cshtml</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\KPI\Library\Library.Web\Views\Shared\_Layout.cshtml</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\KPI\Library\Library.Web\Content\Site.css</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\KPI\Library\Library.Core\App.config</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\KPI\Library\Library.Shared\Interfaces\IAuthor.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\KPI\Library\Library.Shared\Interfaces\IClient.cs</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>
