@@ -3,18 +3,36 @@ using System.Web.Mvc;
 using Library.Core.Shared;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System;
+using System.Web.Script.Serialization;
+using Newtonsoft.Json;
 
 namespace Library.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private static HttpClient _client = new HttpClient();
+        private static HttpClient _client;
+        private static JavaScriptSerializer _JSON = new JavaScriptSerializer();
 
-        public async Task<ActionResult> Index()
+        static HomeController()
+        {
+            _client = new HttpClient();
+            _client.BaseAddress = new Uri("http://localhost:61592");
+            _client.DefaultRequestHeaders.Accept.Clear();
+            _client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("aplication/json"));
+        }
+
+        public ActionResult Index()
         {
             ViewBag.Title = "Books";
 
-            IEnumerable<Book> list = await _client.GetAsync("http://localhost:61592/api/Library").Result.Content.ReadAsAsync<IEnumerable<Book>>();
+            IEnumerable<Book> list = null;
+            HttpResponseMessage response = _client.GetAsync("api/Library").Result;
+            if (response.IsSuccessStatusCode)
+            {
+                var tmp = response.Content.ReadAsStringAsync().Result;
+                list = JsonConvert.DeserializeObject<IEnumerable<Book>>(tmp);
+            }
 
             return View(list);
         }

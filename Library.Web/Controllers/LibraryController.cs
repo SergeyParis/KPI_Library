@@ -3,29 +3,40 @@ using Library.Core.Shared;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Script.Serialization;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace Library.Web.Controllers
 {
     public class LibraryController : ApiController
     {
+        private static JavaScriptSerializer _JSON = new JavaScriptSerializer() { };
+
         public HttpResponseMessage Get()
         {
-            return Request.CreateResponse(HttpStatusCode.OK, DBManager.GetAllBooks());
+            string json = JsonConvert.SerializeObject(DBManager.GetAllBooks(), Formatting.None, 
+                new JsonSerializerSettings() {ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore});
+
+            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK);
+            response.Content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            return response;
         }
-        
-        public void Post([FromBody]object value, [FromBody]EntityType type)
+
+        public void Post([FromBody]int id, [FromBody]int type)
         {
 
         }
 
-        public void Put([FromBody]Book book, [FromBody]Client client)
+        public void Put([FromBody]int bookId, [FromBody]int clientId)
         {
 
         }
 
-        public void Delete([FromBody]Book value)
+        public void Delete([FromBody]int bookId)
         {
-            DBManager.DeleteBook(value);
+
         }
     }
 }
