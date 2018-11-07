@@ -35,6 +35,12 @@ namespace Library.Core
             _context.SaveChanges();
         }
 
+        public static void DeleteBook(Book book)
+        {
+            if (_context.Books.Contains(book))
+                _context.Books.Remove(book);
+        }
+
         public static void GiveBookInUse(int bookId, int clientId)
         {
 
