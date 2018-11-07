@@ -39,15 +39,9 @@ namespace Library.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index()
+        public ActionResult Index(EntityType type)
         {
-
-        }
-
-        [ChildActionOnly]
-        public ActionResult AddEntity(EntityType type)
-        {
-
+            return null;
         }
     }
 }

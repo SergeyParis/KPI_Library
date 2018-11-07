@@ -3,8 +3,28 @@
     @model IEnumerable<Library.Core.Shared.Book>
     @{
         var i = 0;
+        var showForm = false;
     }
     <h1>Books</h1>
+
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+    <div class="form-group">
+        <label for="exampleInputEmail1">X</label> @Html.Hidden("x")
+    </div>
+
+
+
+        
+        @*<label>Y</label> @Html.TextBox("y")
+
+        if (ViewBag.Result != null)
+        {
+            <p>@ViewBag.Result</p>
+        }
+        <input type="submit" name="operation" value="Get Result" />*@
+    }
+
     <table class="table table-hover">
         <tr>
             <th scope="col">#</th>
@@ -28,7 +48,8 @@
                             {
                                 <li><a href="#">Give in use...</a></li>
                             }
-                            else {
+                            else
+                            {
                                 <li><a href="#">Take from use...</a></li>
                             }
 
