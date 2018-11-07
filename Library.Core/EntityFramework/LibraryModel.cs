@@ -1,13 +1,14 @@
-namespace Library.Core.EntityFramework
+namespace Library.Core.DataBase
 {
     using System;
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
+    using Library.Core.Shared;
 
-    public partial class LibraryModel : DbContext
+    public partial class LibraryContext : DbContext
     {
-        public LibraryModel()
+        public LibraryContext()
             : base("name=LibraryModel")
         {
         }

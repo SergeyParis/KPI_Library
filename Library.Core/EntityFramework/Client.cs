@@ -1,4 +1,4 @@
-namespace Library.Core.EntityFramework
+namespace Library.Core.Shared
 {
     using System;
     using System.Collections.Generic;

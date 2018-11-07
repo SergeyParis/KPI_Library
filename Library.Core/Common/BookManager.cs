@@ -1,8 +1,8 @@
 ﻿using System.Data.Entity;
-using Library.Shared;
-using Library.Core.EntityFramework;
 using System.Collections.Generic;
 using System.Linq;
+using Library.Core.DataBase;
+using Library.Core.Shared;
 
 namespace Library.Core
 {
@@ -14,30 +14,20 @@ namespace Library.Core
         {
             _context = new LibraryContext();
         }
+        
+        public static IEnumerable<Book> GetAllBooks() => _context.Books.Include(c => c.AuthorId).Include(c => c.ClientId).ToArray();
 
-        // TODO: REMOVE!!!
-        public static void DROP_DB() => _context.Database.Delete();
-        //
-
-        public static IEnumerable<IBook> GetAllBooks() => _context.Authors.Include().ToArray();
-
-        public static void AddBook(IBook book, IAuthor author)
+        public static void AddBook(Book book)
         {
-            if (book == null)
-                return;
-
-            _context.Books.Add(new BookWrap(book));
-            _context.Authors.Add(new AuthorWrap(author));
+            _context.Books.Add(book);
 
             _context.SaveChanges();
         }
 
         public static void GiveBookInUse(int bookId, int clientId)
         {
-            var book = _context.Books.Find(bookId);
-            var client = _context.Clients.Find(clientId);
 
-            client.GiveInUse(book);
+
             _context.SaveChanges();
         }
     }

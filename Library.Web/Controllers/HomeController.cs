@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using Library.Shared;
-using Library.Shared.Models;
 using Library.Core;
+using Library.Core.Shared;
 using System.Linq;
 
 namespace Library.Web.Controllers
@@ -14,7 +13,7 @@ namespace Library.Web.Controllers
         {
             ViewBag.Title = "Books";
 
-            IEnumerable<IBook> list = BookManager.GetAllBooks();
+            IEnumerable<Book> list = BookManager.GetAllBooks();
 
             return View(list);
         }
