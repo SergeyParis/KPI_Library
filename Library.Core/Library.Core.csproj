@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\DBManager.cs" />
+    <Compile Include="Common\EntityType.cs" />
     <Compile Include="EntityFramework\Author.cs" />
     <Compile Include="EntityFramework\Book.cs" />
     <Compile Include="EntityFramework\Client.cs" />

@@ -1,24 +1,24 @@
 ﻿using Library.Core;
 using Library.Core.Shared;
-using System;
-using System.Collections.Generic;
+using System.Net;
+using System.Net.Http;
 using System.Web.Http;
 
 namespace Library.Web.Controllers
 {
     public class LibraryController : ApiController
     {
-        public IEnumerable<Book> Get()
+        public HttpResponseMessage Get()
         {
-            return DBManager.GetAllBooks();
+            return Request.CreateResponse(HttpStatusCode.OK, DBManager.GetAllBooks());
         }
         
-        public void Post([FromBody]object value, EntityType type)
+        public void Post([FromBody]object value, [FromBody]EntityType type)
         {
 
         }
 
-        public void Put([FromBody]Book value)
+        public void Put([FromBody]Book book, [FromBody]Client client)
         {
 
         }

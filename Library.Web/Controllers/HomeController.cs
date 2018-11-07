@@ -1,19 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
-using Library.Core;
 using Library.Core.Shared;
-using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace Library.Web.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        private static HttpClient _client = new HttpClient();
+
+        public async Task<ActionResult> Index()
         {
             ViewBag.Title = "Books";
 
-            IEnumerable<Book> list = DBManager.GetAllBooks();
+            IEnumerable<Book> list = await _client.GetAsync("http://localhost:61592/api/Library").Result.Content.ReadAsAsync<IEnumerable<Book>>();
 
             return View(list);
         }
