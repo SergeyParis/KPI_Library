@@ -2,8 +2,9 @@
 {
     public enum EntityType
     {
-        Book = 0,
-        Client = 1,
-        Author = 2
+        Nothing = 0,
+        Book = 1,
+        Client = 2,
+        Author = 3
     }
 }

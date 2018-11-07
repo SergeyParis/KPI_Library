@@ -16,6 +16,8 @@ namespace Library.Core
         }
         
         public static IEnumerable<Book> GetAllBooks() => _context.Books.Include(c => c.Author).Include(c => c.Client).ToArray();
+        public static IEnumerable<Author> GetAllAuthors() => _context.Authors.ToArray();
+        public static IEnumerable<Client> GetAllClients() => _context.Clients.ToArray();
         public static Author GetAuthorByName(string name) => _context.Authors.Where(o => o.Name == name).First();
         public static Client GetClientByName(string name) => _context.Clients.Where(o => o.Name == name).First();
 

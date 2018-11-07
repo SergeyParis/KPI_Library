@@ -7,6 +7,7 @@ using System;
 using System.Web.Script.Serialization;
 using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
+using Library.Core;
 
 namespace Library.Web.Controllers
 {
@@ -15,7 +16,7 @@ namespace Library.Web.Controllers
         private static HttpClient _client;
         private static JavaScriptSerializer _JSON = new JavaScriptSerializer();
 
-        
+        private EntityType _currentType = EntityType.Nothing;
 
         static HomeController()
         {
@@ -29,16 +30,7 @@ namespace Library.Web.Controllers
         public ActionResult Index()
         {
             ViewBag.Title = "Books";
-
-            IEnumerable<Book> list = null;
-            HttpResponseMessage response = _client.GetAsync("api/Library").Result;
-            if (response.IsSuccessStatusCode)
-            {
-                var tmp = response.Content.ReadAsStringAsync().Result;
-                list = JsonConvert.DeserializeObject<IEnumerable<Book>>(tmp);
-            }
-
-            return View(new HomeViewModel() { Books = list });
+            return View(new HomeViewModel() { Books = MakeGetRequest<Book>(string.Empty) });
         }
 
         [HttpPost]
@@ -50,7 +42,34 @@ namespace Library.Web.Controllers
         [HttpPost]
         public void GetTypeForm(EntityType type)
         {
+            if (type == EntityType.Book)
+            {
+                ViewBag.Authors = MakeGetRequest<Author>(((int)EntityType.Author).ToString());
+            }
+
+            _currentType = type;
             ViewBag.Type = type;
+        }
+
+        [NonAction]
+        public IEnumerable<T> MakeGetRequest<T>(string parameters)
+        {
+            IEnumerable<T> result;
+            string queryString;
+
+            if (string.IsNullOrEmpty(parameters))
+                queryString = "api/Library";
+            else
+                queryString = $"api/Library/{parameters}";
+
+
+            HttpResponseMessage response = _client.GetAsync("api/Library").Result;
+            if (response.IsSuccessStatusCode)
+                result = JsonConvert.DeserializeObject<IEnumerable<T>>(response.Content.ReadAsStringAsync().Result);
+            else
+                result = null;
+
+            return result;
         }
     }
 }

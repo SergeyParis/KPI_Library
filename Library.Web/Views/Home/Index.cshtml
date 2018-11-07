@@ -12,7 +12,7 @@
     {
         <div class="form-group">
             <label for="f1_typeSelect">Type of entity: </label>
-            @Html.EnumDropDownListFor(m => m.EntityType, null, new { id = "exampleFormControlInput1", @class = "form-control", onchange = "this.form.submit()" })
+            @Html.EnumDropDownListFor(m => m.EntityType, null, new { id = "f1_typeSelect", @class = "form-control", onchange = "this.form.submit()" })
         </div>
     }
     @using (Html.BeginForm("Index", "Home", FormMethod.Post))
@@ -22,17 +22,24 @@
             @switch ((EntityType)ViewBag.Type)
             {
                 case EntityType.Author:
-                <div class="form-group">
-                    <label for="exampleFormControlInput1">Email address</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Author Name</label>
+                        <input type="email" class="form-control" id="f2_Name" />
+                    </div>
                     break;
                 case EntityType.Client:
-
-
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Client Name</label>
+                        <input type="email" class="form-control" id="f2_Name" />
+                    </div>
                     break;
                 case EntityType.Book:
-
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Book Name</label>
+                        <input type="email" class="form-control" id="f2_Name" />
+                        <label for="f2_authorSelect">Type of entity: </label>
+                        @Html.EnumDropDownListFor(m => m.EntityType, null, new { id = "f2_authorSelect", @class = "form-control", onchange = "this.form.submit()" })
+                    </div>
 
                     break;
             }

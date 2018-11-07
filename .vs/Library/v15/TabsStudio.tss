@@ -2,7 +2,7 @@
 <ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ArrayOfArrayOfString>
     <ArrayOfString>
-      <string>C:\KPI\Library\Library.Core\EntityFramework\LibraryModel.cs</string>
+      <string>C:\KPI\Library\Library.Web\Controllers\LibraryController.cs</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\KPI\Library\Library.Web\Controllers\HomeController.cs</string>
@@ -11,22 +11,25 @@
       <string>C:\KPI\Library\Library.Core\Common\DBManager.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\KPI\Library\Library.Core\App.config</string>
+      <string>C:\KPI\Library\Library.Web\App_Start\RouteConfig.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\KPI\Library\Library.Web\Web.config</string>
+      <string>C:\KPI\Library\Library.Web\App_Start\WebApiConfig.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\KPI\Library\Library.Web\Views\Home\Index.cshtml</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\KPI\Library\Library.Core\EntityFramework\Book.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\KPI\Library\Library.Core\EntityFramework\Client.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
       <string>C:\KPI\Library\Library.Core\EntityFramework\Author.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\KPI\Library\Library.Web\Views\Home\Index.cshtml</string>
+      <string>C:\KPI\Library\Library.Core\Common\EntityType.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\KPI\Library\Library.Web\Models\HomeViewModel.cs</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>
