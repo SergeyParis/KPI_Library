@@ -14,7 +14,6 @@ namespace Library.Core.Shared
             Books = new HashSet<Book>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
         [Required]

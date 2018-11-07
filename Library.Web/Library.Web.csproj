@@ -267,10 +267,6 @@
       <Project>{d3f95735-6328-404e-8c68-6903e323e4b2}</Project>
       <Name>Library.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Library.Shared\Library.Shared.csproj">
-      <Project>{f6a08832-f490-405e-a2ef-b28c5eec4e0f}</Project>
-      <Name>Library.Shared</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
