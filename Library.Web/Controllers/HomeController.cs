@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System;
 using System.Web.Script.Serialization;
 using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
 
 namespace Library.Web.Controllers
 {
@@ -13,6 +14,8 @@ namespace Library.Web.Controllers
     {
         private static HttpClient _client;
         private static JavaScriptSerializer _JSON = new JavaScriptSerializer();
+
+        
 
         static HomeController()
         {
@@ -35,13 +38,19 @@ namespace Library.Web.Controllers
                 list = JsonConvert.DeserializeObject<IEnumerable<Book>>(tmp);
             }
 
-            return View(list);
+            return View(new HomeViewModel() { Books = list });
         }
 
         [HttpPost]
-        public ActionResult Index(EntityType type)
+        public ActionResult Index(string name)
         {
             return null;
+        }
+
+        [HttpPost]
+        public void GetTypeForm(EntityType type)
+        {
+            ViewBag.Type = type;
         }
     }
 }

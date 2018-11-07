@@ -1,29 +1,30 @@
 ﻿
 <div class="row">
-    @model IEnumerable<Library.Core.Shared.Book>
+    @using Library.Core.Shared;
+    @model HomeViewModel
     @{
         var i = 0;
         var showForm = false;
     }
     <h1>Books</h1>
 
+    @using (Html.BeginForm("Index", "GetTypeForm", FormMethod.Post))
+    {
+        <div class="form-group">
+            <label for="f1_typeSelect">Type of entity: </label> 
+            @Html.EnumDropDownListFor(m => m.EntityType, null, new { id = "exampleFormControlInput1", @class = "form-control", onchange = "this.form.submit()" })
+        </div>
+    }
     @using (Html.BeginForm("Index", "Home", FormMethod.Post))
     {
-    <div class="form-group">
-        <label for="exampleInputEmail1">X</label> @Html.Hidden("x")
-    </div>
-
-
-
-        
-        @*<label>Y</label> @Html.TextBox("y")
-
-        if (ViewBag.Result != null)
-        {
-            <p>@ViewBag.Result</p>
-        }
-        <input type="submit" name="operation" value="Get Result" />*@
+        if (ViewBag.Type)
+        @switch (ViewBag.)
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
     }
+
 
     <table class="table table-hover">
         <tr>
@@ -31,7 +32,7 @@
             <th scope="col">Name</th>
             <th scope="col">Author Name</th>
         </tr>
-        @foreach (var row in Model)
+        @foreach (var row in Model.Books)
         {
             i++;
             <tr>
