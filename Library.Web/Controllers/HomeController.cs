@@ -39,9 +39,13 @@ namespace Library.Web.Controllers
             return null;
         }
 
+        [ChildActionOnly]
+        public PartialViewResult GetTypeForm() => PartialView("_GetTypeForm", new GetTypeFormModel() { Type = _currentType });
+        [ChildActionOnly]
         [HttpPost]
-        public void GetTypeForm(EntityType type)
+        public PartialViewResult GetTypeForm(GetTypeFormModel model)
         {
+            var type = model.Type;
             if (type == EntityType.Book)
             {
                 ViewBag.Authors = MakeGetRequest<Author>(((int)EntityType.Author).ToString());
@@ -49,6 +53,8 @@ namespace Library.Web.Controllers
 
             _currentType = type;
             ViewBag.Type = type;
+
+            return PartialView("_GetTypeForm", new GetTypeFormModel() { Type = _currentType });
         }
 
         [NonAction]

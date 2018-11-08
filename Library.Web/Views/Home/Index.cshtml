@@ -8,44 +8,44 @@
     }
     <h1>Books</h1>
 
-    @using (Html.BeginForm("Index", "GetTypeForm", FormMethod.Post))
-    {
-        <div class="form-group">
-            <label for="f1_typeSelect">Type of entity: </label>
-            @Html.EnumDropDownListFor(m => m.EntityType, null, new { id = "f1_typeSelect", @class = "form-control", onchange = "this.form.submit()" })
-        </div>
-    }
-    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    @Html.Partial("_GetTypeForm");
+    @using (Html.BeginForm("Index", "Home"))
     {
         if (ViewBag.Type != null)
         {
-            @switch ((EntityType)ViewBag.Type)
-            {
-                case EntityType.Author:
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Author Name</label>
-                        <input type="email" class="form-control" id="f2_Name" />
-                    </div>
-                    break;
-                case EntityType.Client:
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Client Name</label>
-                        <input type="email" class="form-control" id="f2_Name" />
-                    </div>
-                    break;
-                case EntityType.Book:
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Book Name</label>
-                        <input type="email" class="form-control" id="f2_Name" />
-                        <label for="f2_authorSelect">Type of entity: </label>
-                        @Html.EnumDropDownListFor(m => m.EntityType, null, new { id = "f2_authorSelect", @class = "form-control", onchange = "this.form.submit()" })
-                    </div>
-
-                    break;
-            }
+            <p>@ViewBag.Type</p>
         }
-    }
+        @*if (ViewBag.Type != null)
+            {
+                @switch (ViewBag.Type)
+                {
+                    case EntityType.Author:
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Author Name</label>
+                            <input type="email" class="form-control" id="f2_Name" />
+                            <button type="submit" class="btn btn-primary">Add</button>
+                        </div>
+                        break;
+                    case EntityType.Client:
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Client Name</label>
+                            <input type="email" class="form-control" id="f2_Name" />
+                            <button type="submit" class="btn btn-primary">Add</button>
+                        </div>
+                        break;
+                    case EntityType.Book:
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Book Name</label>
+                            <input type="email" class="form-control" id="f2_Name" />
+                            <label for="f2_authorSelect">Type of entity: </label>
+                            @Html.EnumDropDownListFor(m => m.EntityType, null, new { id = "f2_authorSelect", @class = "form-control", onchange = "this.form.submit()" })
+                            <button type="submit" class="btn btn-primary">Add</button>
+                        </div>
 
+                        break;
+                }
+            }*@
+    }
 
     <table class="table table-hover">
         <tr>
@@ -85,3 +85,12 @@
 
     </table>
 </div>
+
+<script type="text/javascript">
+    function OnSuccess(response) {
+        alert("done");
+    }
+    function OnFailure(response) {
+        alert("Error occured.");
+    }
+</script>

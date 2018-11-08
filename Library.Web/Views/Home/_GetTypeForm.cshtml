@@ -1,0 +1,13 @@
+﻿@using Library.Core.Shared;
+@using (Html.BeginForm("GetTypeForm", "Home", new AjaxOptions
+{
+    OnSuccess = "OnSuccess",
+    OnFailure = "OnFailure"
+}))
+
+{
+    <div class="form-group">
+        <label for="f1_typeSelect">Type of entity: </label>
+        @Html.EnumDropDownListFor(m => m.EntityType, null, new { id = "f1_typeSelect", @class = "form-control", onchange = "this.form.submit()" })
+    </div>
+}
