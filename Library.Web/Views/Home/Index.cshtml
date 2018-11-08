@@ -9,7 +9,7 @@
     <h1>Books</h1>
 
     <div class="col-sm-4">
-        @using (Ajax.BeginForm("Index", new AjaxOptions() { }))
+        @using (Ajax.BeginForm("Index", new AjaxOptions() { HttpMethod = "POST" }))
         {
             <div class="form-group">
                 <label for="exampleFormControlInput1">Author Name</label>
@@ -20,7 +20,7 @@
         }
     </div>
     <div class="col-sm-4">
-        @using (Ajax.BeginForm("Index", new AjaxOptions() { }))
+        @using (Ajax.BeginForm("Index", new AjaxOptions() { HttpMethod = "POST" }))
         {
             <div class="form-group">
                 <label for="exampleFormControlInput1">Client Name</label>
@@ -31,13 +31,13 @@
         }
     </div>
     <div class="col-sm-4">
-        @using (Ajax.BeginForm("Index", new AjaxOptions() { }))
+        @using (Ajax.BeginForm("Index", new AjaxOptions() { HttpMethod = "POST" }))
         {
             <div class="form-group">
                 <label for="exampleFormControlInput1">Book Name</label>
                 <input type="text" class="form-control" name="name" />
                 <label for="authorSelect">Type of entity: </label>
-                @Html.EnumDropDownListFor(m => m.EntityType, null, new { id = "f2_authorSelect", @class = "form-control", onchange = "this.form.submit()" })
+                @Html.EnumDropDownListFor(m => m.EntityType, null, new { name = "authorId", @class = "form-control" })
                 @Html.Hidden("type", "1")
                 <button type="submit" class="btn btn-primary" style="margin-top: 8px; width: 20%">Add</button>
             </div>
