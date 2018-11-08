@@ -100,7 +100,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
-    <Compile Include="Controllers\ValuesControllerTest.cs" />
+    <Compile Include="Controllers\LibraryControllerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
@@ -109,6 +109,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Library.Core\Library.Core.csproj">
+      <Project>{D3F95735-6328-404E-8C68-6903E323E4B2}</Project>
+      <Name>Library.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Library.Web\Library.Web.csproj">
       <Project>{499A4463-BF25-4FD6-A540-C372118C68B3}</Project>
       <Name>Library.Web</Name>

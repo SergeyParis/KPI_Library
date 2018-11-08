@@ -17,7 +17,7 @@ namespace Library.Web.Controllers
         private static JavaScriptSerializer _JSON = new JavaScriptSerializer();
 
         static HomeController()
-        {
+        { 
             _client = new HttpClient();
             _client.BaseAddress = new Uri("http://localhost:61592");
             _client.DefaultRequestHeaders.Accept.Clear();
