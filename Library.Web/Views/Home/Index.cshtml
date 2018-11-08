@@ -8,32 +8,41 @@
     }
     <h1>Books</h1>
 
-    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @class = "col-sm-6" }))
-    {
-        <div class="form-group">
-            <label for="exampleFormControlInput1">Author Name</label>
-            <input type="email" class="form-control" id="f2_Name" />
-            <button type="submit" class="btn btn-primary">Add</button>
-        </div>
-    }
-    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @class = "col-sm-6" }))
-    {
-        <div class="form-group">
-            <label for="exampleFormControlInput1">Client Name</label>
-            <input type="email" class="form-control" id="f2_Name" />
-            <button type="submit" class="btn btn-primary">Add</button>
-        </div>
-    }
-    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @class = "col-sm-6" }))
-    {
-        <div class="form-group">
-            <label for="exampleFormControlInput1">Book Name</label>
-            <input type="email" class="form-control" id="f2_Name" />
-            <label for="f2_authorSelect">Type of entity: </label>
-            @Html.EnumDropDownListFor(m => m.EntityType, null, new { id = "f2_authorSelect", @class = "form-control", onchange = "this.form.submit()" })
-            <button type="submit" class="btn btn-primary">Add</button>
-        </div>
-    }
+    <div class="col-sm-4">
+        @using (Ajax.BeginForm("Index", new AjaxOptions() { }))
+        {
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Author Name</label>
+                <input type="text" class="form-control" name="name" />
+                @Html.Hidden("type", "3")
+                <button type="submit" class="btn btn-primary" style="margin-top: 8px; width: 20%">Add</button>
+            </div>
+        }
+    </div>
+    <div class="col-sm-4">
+        @using (Ajax.BeginForm("Index", new AjaxOptions() { }))
+        {
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Client Name</label>
+                <input type="text" class="form-control" name="name" />
+                @Html.Hidden("type", "2")
+                <button type="submit" class="btn btn-primary" style="margin-top: 8px; width: 20%">Add</button>
+            </div>
+        }
+    </div>
+    <div class="col-sm-4">
+        @using (Ajax.BeginForm("Index", new AjaxOptions() { }))
+        {
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Book Name</label>
+                <input type="text" class="form-control" name="name" />
+                <label for="authorSelect">Type of entity: </label>
+                @Html.EnumDropDownListFor(m => m.EntityType, null, new { id = "f2_authorSelect", @class = "form-control", onchange = "this.form.submit()" })
+                @Html.Hidden("type", "1")
+                <button type="submit" class="btn btn-primary" style="margin-top: 8px; width: 20%">Add</button>
+            </div>
+        }
+    </div>
 
     <table class="table table-hover">
         <tr>
@@ -73,12 +82,3 @@
 
     </table>
 </div>
-
-<script type="text/javascript">
-    function OnSuccess(response) {
-        alert("done");
-    }
-    function OnFailure(response) {
-        alert("Error occured.");
-    }
-</script>

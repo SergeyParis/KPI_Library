@@ -34,10 +34,25 @@ namespace Library.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(string name)
+        public void Index(int type, string name)
         {
-            return null;
+            EntityType Type = (EntityType)type;
+
+            switch (Type)
+            {
+                case EntityType.Client:
+
+                    break;
+                case EntityType.Author:
+
+                    break;
+                case EntityType.Book:
+
+                    break;
+
+            }
         }
+
 
         [NonAction]
         public IEnumerable<T> MakeGetRequest<T>(string parameters)
