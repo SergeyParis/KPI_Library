@@ -16,8 +16,6 @@ namespace Library.Web.Controllers
         private static HttpClient _client;
         private static JavaScriptSerializer _JSON = new JavaScriptSerializer();
 
-        private EntityType _currentType = EntityType.Nothing;
-
         static HomeController()
         {
             _client = new HttpClient();
