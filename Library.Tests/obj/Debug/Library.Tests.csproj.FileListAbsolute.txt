@@ -45,3 +45,5 @@ C:\KPI\Library\Library.Tests\bin\Debug\EntityFramework.dll
 C:\KPI\Library\Library.Tests\bin\Debug\Library.Core.pdb
 C:\KPI\Library\Library.Tests\bin\Debug\Library.Core.dll.config
 C:\KPI\Library\Library.Tests\bin\Debug\EntityFramework.xml
+C:\KPI\Library\Library.Tests\bin\Debug\EntityFramework.SqlServer.dll
+C:\KPI\Library\Library.Tests\bin\Debug\EntityFramework.SqlServer.xml

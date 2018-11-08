@@ -11,9 +11,9 @@ namespace Library.Core.Shared
         public Book() { }
         public Book(string name, string iSBN, Author author)
         {
-            Name = name;
-            ISBN = iSBN;
-            Author = author;
+            Name = string.IsNullOrEmpty(name) ? throw new ArgumentException("Name can't be empty") : name;
+            ISBN = string.IsNullOrEmpty(iSBN) ? throw new ArgumentException("iSBN can't be empty") : iSBN;
+            Author = author ?? throw new NullReferenceException();
         }
 
         public int Id { get; set; }

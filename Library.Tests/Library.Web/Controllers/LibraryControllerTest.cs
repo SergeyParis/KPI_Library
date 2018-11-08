@@ -8,10 +8,10 @@ using Library.Core.Shared;
 
 namespace Library.Tests.Controllers
 {
-    [TestClass]
+    
     public class LibraryControllerTest
     {
-        [TestMethod]
+       
         public void Get()
         {
             // Arrange
@@ -26,7 +26,7 @@ namespace Library.Tests.Controllers
             Assert.AreEqual(5, result.Count());
         }
 
-        [TestMethod]
+       
         public void GetByTypeAuthor()
         {
             // Arrange
@@ -42,7 +42,7 @@ namespace Library.Tests.Controllers
             Assert.AreEqual(1, result.Count());
         }
 
-        [TestMethod]
+        
         public void GetByTypeClient()
         {
             // Arrange

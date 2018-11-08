@@ -9,4 +9,3 @@ C:\KPI\Library\Library.Core\obj\Debug\Library.Core.csproj.CoreCompileInputs.cach
 C:\KPI\Library\Library.Core\obj\Debug\Library.Core.csproj.CopyComplete
 C:\KPI\Library\Library.Core\obj\Debug\Library.Core.dll
 C:\KPI\Library\Library.Core\obj\Debug\Library.Core.pdb
-C:\KPI\Library\Library.Core\obj\Debug\Library.Core.csprojAssemblyReference.cache
