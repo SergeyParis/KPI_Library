@@ -8,43 +8,31 @@
     }
     <h1>Books</h1>
 
-    @Html.Partial("_GetTypeForm");
-    @using (Html.BeginForm("Index", "Home"))
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @class = "col-sm-6" }))
     {
-        if (ViewBag.Type != null)
-        {
-            <p>@ViewBag.Type</p>
-        }
-        @*if (ViewBag.Type != null)
-            {
-                @switch (ViewBag.Type)
-                {
-                    case EntityType.Author:
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1">Author Name</label>
-                            <input type="email" class="form-control" id="f2_Name" />
-                            <button type="submit" class="btn btn-primary">Add</button>
-                        </div>
-                        break;
-                    case EntityType.Client:
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1">Client Name</label>
-                            <input type="email" class="form-control" id="f2_Name" />
-                            <button type="submit" class="btn btn-primary">Add</button>
-                        </div>
-                        break;
-                    case EntityType.Book:
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1">Book Name</label>
-                            <input type="email" class="form-control" id="f2_Name" />
-                            <label for="f2_authorSelect">Type of entity: </label>
-                            @Html.EnumDropDownListFor(m => m.EntityType, null, new { id = "f2_authorSelect", @class = "form-control", onchange = "this.form.submit()" })
-                            <button type="submit" class="btn btn-primary">Add</button>
-                        </div>
-
-                        break;
-                }
-            }*@
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Author Name</label>
+            <input type="email" class="form-control" id="f2_Name" />
+            <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+    }
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @class = "col-sm-6" }))
+    {
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Client Name</label>
+            <input type="email" class="form-control" id="f2_Name" />
+            <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+    }
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @class = "col-sm-6" }))
+    {
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Book Name</label>
+            <input type="email" class="form-control" id="f2_Name" />
+            <label for="f2_authorSelect">Type of entity: </label>
+            @Html.EnumDropDownListFor(m => m.EntityType, null, new { id = "f2_authorSelect", @class = "form-control", onchange = "this.form.submit()" })
+            <button type="submit" class="btn btn-primary">Add</button>
+        </div>
     }
 
     <table class="table table-hover">
