@@ -35,5 +35,14 @@ namespace Library.Tests.Library.Core
             Book book = new Book("test", "", new Author());
         }
 
+        [TestMethod]
+        public void BookModel_name_shold_equal()
+        {
+            // Act
+            Book book = new Book("test1", "test2", new Author());
+
+            // Assert
+            StringAssert.Equals("test1", book.Name);
+        }
     }
 }
